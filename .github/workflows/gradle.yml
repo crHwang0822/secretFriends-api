@@ -28,6 +28,13 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: make application.properties
+      run: |
+          cd ./src/main/resources
+          touch ./applicaion.properties
+          echo "${{secrets.APPLICATION_PROPERTIES}}" > ./application.properties
+          cat ./application.properties
+
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
