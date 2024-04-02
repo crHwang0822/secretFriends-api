@@ -33,6 +33,7 @@ jobs:
 
     - name: make application.properties
       run: |
+          chmod +x ./gradlew
           cd ./src/main/resources
           touch ./applicaion.properties
           echo "${{secrets.APPLICATION_PROPERTIES}}" > ./application.properties
