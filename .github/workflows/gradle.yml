@@ -38,11 +38,11 @@ jobs:
     - name: Set application.yml file
       uses: microsoft/variable-substitution@v1
       with:
-        files: ${{ env.RESOURCE_PATH }}
+        files: ${{env.RESOURCE_PATH}}
       env:
-        spring.datasource.url: ${{ secrets.AWS_DATABASE_URL }}
-        spring.datasource.username: ${{ secrets.AWS_DATABASE_USER }}
-        spring.datasource.password: ${{ secrets.AWS_DATABASE_PASSWORD }}
+        spring.datasource.url: ${{secrets.AWS_DATABASE_URL}}
+        spring.datasource.username: ${{secrets.AWS_DATABASE_USER}}
+        spring.datasource.password: ${{secrets.AWS_DATABASE_PASSWORD}}
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
