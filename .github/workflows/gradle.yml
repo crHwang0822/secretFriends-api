@@ -38,7 +38,7 @@ jobs:
     - name: Set application.yml file
       uses: microsoft/variable-substitution@v1
       with:
-        files: ${{ env.RESOURCE_PATH }}/application.yml
+        files: ${{ env.RESOURCE_PATH }}
       env:
         spring.datasource.url: ${{ secrets.AWS_DATABASE_URL }}
         spring.datasource.username: ${{ secrets.AWS_DATABASE_USER }}
