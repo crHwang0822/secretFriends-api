@@ -23,6 +23,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    env:
+      RESOURCE_PATH: ./src/main/resources/application.yml
 
     steps:
     - uses: actions/checkout@v4
